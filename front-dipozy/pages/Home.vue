@@ -1,7 +1,18 @@
 <template>
   <div id="home">
-
-    <h1>MAHOUTA</h1>
+    <LazyHydrate when-idle>
+      <SfHero class="hero">
+        <SfHeroItem
+          v-for="(hero, i) in heroes"
+          :key="i"
+          :title="hero.title"
+          :subtitle="hero.subtitle"
+          :background="hero.background"
+          :image="hero.image"
+          :class="hero.className"
+        />
+      </SfHero>
+    </LazyHydrate>
 
     <LazyHydrate when-visible>
       <SfBannerGrid :banner-grid="1" class="banner-grid">
