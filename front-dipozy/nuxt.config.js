@@ -3,6 +3,7 @@ import { getRoutes } from './routes';
 import theme from './themeConfig';
 
 export default {
+  target: 'static', // default is 'server'  
   server: {
     port: 3001,
     host: 'localhost'
